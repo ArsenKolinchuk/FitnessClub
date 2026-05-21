@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="550.0" spacing="20.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitnessclub.ClientDetailsController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+    <children>
+        <Label text="Профіль клієнта" textFill="#1f1c2c">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+
+        <HBox spacing="25.0">
+            <children>
+                <VBox prefWidth="250.0" spacing="12.0" style="-fx-border-color: #e0e0e0; -fx-border-width: 0 1 0 0; -fx-padding: 0 20 0 0;">
+                    <children>
+                        <Label text="Особисті дані" textFill="#928dab">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+
+                        <VBox spacing="2.0">
+                            <children>
+                                <Label text="ПІБ:" textFill="#666666" />
+                                <Label fx:id="nameLabel" text="Завантаження..." textFill="#2f2f2f" wrapText="true">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="2.0">
+                            <children>
+                                <Label text="Телефон:" textFill="#666666" />
+                                <Label fx:id="phoneLabel" text="Завантаження..." textFill="#2f2f2f">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="2.0">
+                            <children>
+                                <Label text="Email:" textFill="#666666" />
+                                <Label fx:id="emailLabel" text="Завантаження..." textFill="#2f2f2f">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="2.0">
+                            <children>
+                                <Label text="Дата народження / Стать:" textFill="#666666" />
+                                <Label fx:id="bioLabel" text="Завантаження..." textFill="#2f2f2f">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+
+                <VBox prefWidth="250.0" spacing="12.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label text="Поточний абонемент" textFill="#928dab">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+
+                        <VBox prefHeight="110.0" spacing="8.0" style="-fx-background-color: #F8F9FA; -fx-background-radius: 5; -fx-padding: 15;">
+                            <children>
+                                <Label fx:id="subTitleLabel" text="Немає активного абонемента" textFill="#d32f2f">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="subDetailsLabel" text="Придбайте абонемент у вкладці меню" textFill="#666666" wrapText="true">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <Label text="Реєстрація в системі:" textFill="#666666" />
+                        <Label fx:id="regDateLabel" text="01.01.2026" textFill="#2f2f2f">
+                            <font>
+                                <Font name="System Italic" size="13.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+
+        <HBox alignment="CENTER_RIGHT">
+            <children>
+                <Button fx:id="closeButton" mnemonicParsing="false" onAction="#handleClose" style="-fx-background-color: #1F1C2C; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 8 20 8 20; -fx-cursor: hand;" text="Закрити" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

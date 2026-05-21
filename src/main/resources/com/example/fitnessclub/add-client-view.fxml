@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" spacing="15.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitnessclub.AddClientController">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+    <children>
+        <Label text="Реєстрація клієнта" textFill="#2f2f2f">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+        </Label>
+
+        <VBox spacing="5.0">
+            <children>
+                <Label text="ПІБ Клієнта" textFill="#666666" />
+                <TextField fx:id="nameField" promptText="Прик. Іванов Іван Іванович" style="-fx-background-radius: 5; -fx-border-color: #cccccc; -fx-padding: 7;" />
+            </children>
+        </VBox>
+
+        <VBox spacing="5.0">
+            <children>
+                <Label text="Номер телефону (10 цифр)" textFill="#666666" />
+                <TextField fx:id="phoneField" promptText="0971234567" style="-fx-background-radius: 5; -fx-border-color: #cccccc; -fx-padding: 7;" />
+            </children>
+        </VBox>
+
+        <VBox spacing="5.0">
+            <children>
+                <Label text="Email адреса" textFill="#666666" />
+                <TextField fx:id="emailField" promptText="ivan@example.com" style="-fx-background-radius: 5; -fx-border-color: #cccccc; -fx-padding: 7;" />
+            </children>
+        </VBox>
+
+        <HBox spacing="15.0">
+            <children>
+                <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label text="Дата народження" textFill="#666666" />
+                        <DatePicker fx:id="dobPicker" maxWidth="1.7976931348623157E308" style="-fx-background-radius: 5; -fx-border-color: #cccccc; -fx-padding: 3;" />
+                    </children>
+                </VBox>
+                <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label text="Стать" textFill="#666666" />
+                        <ComboBox fx:id="sexComboBox" maxWidth="1.7976931348623157E308" style="-fx-background-radius: 5; -fx-border-color: #cccccc; -fx-padding: 3;" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+
+        <Label fx:id="errorLabel" text="Заповніть усі поля!" textFill="#d32f2f" visible="false">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <HBox alignment="CENTER_RIGHT" spacing="10.0">
+            <children>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancel" style="-fx-background-color: #e0e0e0; -fx-text-fill: #333333; -fx-background-radius: 5; -fx-padding: 8 15 8 15; -fx-cursor: hand;" text="Скасувати" />
+                <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSave" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 8 20 8 20; -fx-cursor: hand;" text="Зберегти">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

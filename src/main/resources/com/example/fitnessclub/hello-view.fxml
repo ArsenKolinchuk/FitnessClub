@@ -1,16 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.fitnessclub.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitnessclub.LoginController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to bottom right, #1F1C2C, #928DAB);" HBox.hgrow="ALWAYS">
+            <children>
+                <Label text="POWER GYM" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Label>
+                <Label text="Система адміністрування" textFill="#e0e0e0">
+                    <font>
+                        <Font name="System Italic" size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+
+        <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="350.0" spacing="15.0" style="-fx-background-color: #FFFFFF;">
+            <padding>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+            </padding>
+            <children>
+                <Label text="Вхід у систему" textFill="#2f2f2f">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Label>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Email адреса" textFill="#666666">
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="emailField" promptText="admin@gym.com" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #cccccc; -fx-padding: 8;" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Пароль" textFill="#666666">
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                        </Label>
+                        <PasswordField fx:id="passwordField" promptText="••••••••" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #cccccc; -fx-padding: 8;" />
+                    </children>
+                </VBox>
+
+                <Label fx:id="errorLabel" text="Невірний email або пароль" textFill="#d32f2f" visible="false">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Label>
+
+                <Button fx:id="loginButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLogin" style="-fx-background-color: #1F1C2C; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 10; -fx-cursor: hand;" text="Увійти">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</HBox>
